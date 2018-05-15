@@ -8,7 +8,7 @@ db.on('open', () =>{
 })
 
 const firstNote = new Note({
-    text_content: `Hi! It's the first nonsense note, just a test`,
+    text_content: `Hi! It's the second nonsense note, just a test`,
 })
 
 firstNote.save().then((doc, err) => {
