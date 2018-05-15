@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import Wrapper from './components/wrapper'
 import fetchMongo from './utils/fetch'
+import format from './utils/time'
 import './App.css';
 
 const fecthMongo = new fetchMongo()
@@ -22,7 +23,7 @@ class App extends Component {
     console.log(docs.map)
     return !docs.map ? null : docs.map(content => {
       const { create_at, update_at } = content
-      const dateStr = create_at === update_at ? `发表于: ${create_at}` : `更新于: ${update_at}`
+      const dateStr = create_at === update_at ? `发表于: ${format(create_at)}` : `更新于: ${format(update_at)}`
       return (
         <div key={content._id.toString()} className="wrapper">
           <div className="text-wrapper">{content.text_content}</div>
