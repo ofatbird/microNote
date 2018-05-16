@@ -8,8 +8,7 @@ db.on('open', () =>{
 })
 
 const firstNote = new Note({
-    text_content: `Lorem Picsum is a website to provide URL for image placeholder. Very awesome! [](https://picsum.photos/)`,
-    img: `https://picsum.photos/200/300`
+    text_content: `这里记录一个可以生成渐变背景CSS的网站，而且渐变是可变的! [](https://www.gradient-animator.com/)`
 })
 
 firstNote.save().then((doc, err) => {

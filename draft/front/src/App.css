@@ -31,6 +31,10 @@
     text-decoration: none;
 }
 
+.text-wrapper a.ellipsis:after {
+    content: '...'
+}
+
 .text-wrapper a:hover {
     text-decoration: underline;
 }

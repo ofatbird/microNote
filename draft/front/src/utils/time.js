@@ -4,7 +4,7 @@ export default function format(time) {
     const isThisYear = cur_date.getFullYear() === date.getFullYear()
     const isThisMonth = isThisYear && (cur_date.getMonth() === date.getMonth())
     const year = isThisYear ? `` : `${date.getFullYear()}-`
-    const hour_minute = isThisYear ? `${date.getHours()}:${date.getMinutes()}`: ``
+    const hour_minute = isThisYear ? `${date.getHours()}:${date.getMinutes() < 10 ? '0'+ date.getMinutes() : date.getMinutes() }`: ``
     let month_day = !isThisYear ?`${date.getMonth() + 1}-${date.getDate()}` : `${date.getMonth() + 1}月${date.getDate()}日`
     if (isThisMonth) {
         switch(cur_date.getDate() - date.getDate()) {
