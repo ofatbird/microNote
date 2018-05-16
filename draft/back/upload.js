@@ -8,7 +8,8 @@ db.on('open', () =>{
 })
 
 const firstNote = new Note({
-    text_content: `Hi! It's the second nonsense note, just a test`,
+    text_content: `Lorem Picsum is a website to provide URL for image placeholder. Very awesome! [](https://picsum.photos/)`,
+    img: `https://picsum.photos/200/300`
 })
 
 firstNote.save().then((doc, err) => {
