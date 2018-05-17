@@ -4,6 +4,6 @@ export default function formatUrl(string) {
         // const [, name, url] = regex.exec(match)
         const urlName = url.replace(/https?:\/\//,'')
         const shortUrl = urlName.slice(0, 15)
-        return `<a href="${url}" target="_blank"${!name && urlName !== shortUrl ? ` class="ellipsis"` :''}><i class="iconfont icon-link"></i>${name ? name : shortUrl.replace(/\/$/, '')}</a>`
+        return `<a href="${url}" target="_blank"${!name && urlName !== shortUrl ? ` class="ellipsis"` :''}><i class="iconfont">&#xe66a;</i>${name ? name : shortUrl.replace(/\/$/, '')}</a>`
     })
 }

@@ -6,24 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="https://s3.amazonaws.com/stitch-sdks/js/library/v3/stable/stitch.min.js"></script> -->
-    <script src="./lib/mongo-stitch.js"></script>
 </head>
 
 <body>
+    <div style="width: 100px;height: 100px; background: #cccccc"></div>
     <script>
-        const clientPromise = stitch.StitchClientFactory.create('micro-note-sstqf');
-        clientPromise.then(client => {
-            const db = client.service('mongodb', 'mongodb-atlas').db('microNote');
-            client.login().then(() =>
-                db.collection('micronotes').find({ }).limit(100).execute()
-            ).then(docs => {
-                console.log("Found docs", docs)
-                console.log("[MongoDB Stitch] Connected to Stitch")
-            }).catch(err => {
-                console.error(err)
-            });
-        });
+        var audio = new Audio('http://music.163.com/song/media/outer/url?id=405998841.mp3')
+        var oDiv = document.querySelector('div')
+        oDiv.addEventListener('click', function() {
+            audio.play()
+        })
+        audio.ontimeupdate = function() {
+            console.log(audio.currentTime)
+        }
     </script>
 </body>
 

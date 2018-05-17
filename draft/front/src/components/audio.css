@@ -1,0 +1,61 @@
+.player {
+    height: 78px;
+    display: inline-block;
+    box-shadow: 0 0 1px 0 #000000;
+}
+
+.album {
+    width: 78px;
+    height: 78px;
+    display: inline-block;
+}
+
+.mask {
+    position: relative;
+    background: rgba(0,0,0, .3);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #efe8e8;
+    margin-top: -5px;
+}
+
+.pause-btn {
+    margin-top: -2px;
+}
+
+.song-info {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    vertical-align: top;
+}
+.time-passed {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    color: #797676;
+}
+.play-track {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+}
+
+.progress {
+    width: 100%;
+    height: 100%;
+    background: red;
+    transform-origin: 0 0;
+    /* transition: transform 1s linear; */
+}

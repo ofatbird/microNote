@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-// import Wrapper from './components/wrapper'
 import fetchMongo from './utils/fetch'
 import format from './utils/time'
 import formatUrl from './utils/url'
 import Header from './Header'
+import AudioPlayer from './components/audioPlayer'
 import './App.css';
 
 const fecthMongo = new fetchMongo()
@@ -28,6 +28,7 @@ class App extends Component {
         <Header />
         <div className="locate-position">
           <div className="note-container">
+            <AudioPlayer songId="404184562" name="Everytime" picUrl="https://p1.music.126.net/FzvcMiD115qWr1X92PXK_g==/1393081234054695.jpg?param=78y78" />
             {!docs.map ? null : docs.map(content => {
               const { create_at, text_content } = content
               const dateStr = format(create_at)
