@@ -27,7 +27,6 @@ export default class AudioPlayer extends Component {
     componentDidMount() {
         const { audio } = this.state
         audio.addEventListener('timeupdate', () => {
-            console.log(audio.currentTime)
             this.setState({ process: audio.currentTime / audio.duration })
         })
         audio.addEventListener('ended', () => {
