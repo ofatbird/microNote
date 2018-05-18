@@ -1,3 +1,7 @@
+.html-player {
+    padding: .3em .7em;
+    user-select: none;
+}
 .player {
     height: 78px;
     display: inline-block;
@@ -35,14 +39,22 @@
 .song-info {
     position: relative;
     display: inline-block;
-    width: 300px;
+    width: 250px;
     height: 100%;
     vertical-align: top;
 }
+.name {
+    margin: .3em .8em;
+}
+
+.name>span:nth-child(3) {
+    font-size: 12px;
+    color: #ac9b9b;
+    font-style: italic;
+}
+
 .time-passed {
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
+    margin: .5em 0 0 .8em;
     color: #797676;
 }
 .play-track {
@@ -57,5 +69,5 @@
     height: 100%;
     background: red;
     transform-origin: 0 0;
-    /* transition: transform 1s linear; */
+    /* transition: transform .5s linear; */
 }

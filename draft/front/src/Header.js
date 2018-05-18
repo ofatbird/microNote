@@ -7,10 +7,10 @@ export default class Header extends Component {
             <div className="header">
                 <a className="logo" href="github.com">MicroNote</a>
                 <div>Simple And Ease</div>
-                <div className="owner">
+                <a className="owner" href="//github.com/ofatbird">
                     <span className="avatar"></span>
-                    <span className="name">Avatar</span>
-                </div>
+                    <span className="ownerName">ofatbird</span>
+                </a>
             </div>
         )
     }

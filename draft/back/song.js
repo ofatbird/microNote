@@ -1,4 +1,5 @@
 const request = require('request')
+const utf8 = require('utf8')
 
 // request('https://api.imjad.cn/cloudmusic/?type=search&search_type=1&s=cocoon', function (err, status, body) {
 //     if (err) {
@@ -10,20 +11,19 @@ const request = require('request')
 // })
 
 function getSong(song, artist) {
+    const songName = utf8.encode(song)
     return new Promise((resolve, reject) => {
-        console.log(song)
-        request(`https://api.imjad.cn/cloudmusic/?type=search&search_type=1&s=${song}`, function (err, status, body) {
+        request(`https://api.imjad.cn/cloudmusic/?type=search&search_type=1&s=${songName}`, function (err, status, body) {
             if (err) {
                 reject(err)
             } else {
-                console.log(body)
                 const data = JSON.parse(body)
                 const {songs} = data.result
                 const hit = {}
                 for (let i = 0; i < songs.length; i++) {
                     if (songs[i].ar[0].name.toLowerCase() == artist.toLowerCase()) {
                         hit['id'] = songs[i].id
-                        hit['singer'] = songs[i].ar[0].name
+                        hit['name'] = `${songs[i].name}-${songs[i].ar[0].name}`
                         hit['url'] = songs[i].al.picUrl
                         break;
                     }
@@ -36,4 +36,4 @@ function getSong(song, artist) {
 }
 
 module.exports = getSong
-// getSong('everytime', 'shane filan')
+// getSong('相思无解', '熊天平').then(music => console.log(music))

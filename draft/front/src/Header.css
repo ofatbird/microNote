@@ -21,6 +21,8 @@
 .owner {
     display: inline-block;
     vertical-align: middle;
+    text-decoration: none;
+    color: #000000;
 }
 .avatar {
     display: inline-block;
@@ -31,7 +33,7 @@
     border-radius: 100%;
     vertical-align: middle;
 }
-.name {
+.ownerName {
     margin-left: .5em;
     vertical-align: middle;
 }
