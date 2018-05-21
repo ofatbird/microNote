@@ -15,18 +15,21 @@ export default class Lazyload extends Component {
         const dom = this.wrapper.current
         let wrapperOffset = getOffsetTop(dom)
         const listenScrollTop = debounce(() => {
-            console.log('!!!')
             if (wrapperOffset < window.scrollY + viewportHeight) {
-                console.log('????')
                 this.setState({ loaded: true })
                 document.removeEventListener('scroll', listenScrollTop)
+                document.removeEventListener('resize', listenScrollTop)
             }
         }, 500, 2000)
+        const listenOffsetTop = debounce(() => {
+            wrapperOffset = getOffsetTop(dom)
+        }, 500, 2000)
         document.addEventListener('scroll', listenScrollTop)
-
+        document.addEventListener('resize', listenOffsetTop)
         if (wrapperOffset < window.scrollY + viewportHeight) {
             this.setState({ loaded: true })
             document.removeEventListener('scroll', listenScrollTop)
+            document.removeEventListener('resize', listenScrollTop)
         }
     }
 

@@ -51,7 +51,7 @@ export default class AudioPlayer extends Component {
             this.setState({ process: audio.currentTime / audio.duration })
         })
         audio.addEventListener('ended', () => {
-            this.setState({ isPlay: !this.state.isPlay })
+            this.setState({ isPlay: !this.state.isPlay, process: 0, })
         })
         audio.addEventListener('canplay', () => {
             this.forceUpdate()

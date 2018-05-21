@@ -6,6 +6,8 @@ import Header from './Header'
 import AudioPlayer from './components/audioPlayer'
 import Loader from './components/loading'
 import Lazyload from './components/Lazyload'
+
+// import BasicExample from './routes'
 import './App.css';
 
 const fecthMongo = new fetchMongo()
@@ -35,6 +37,7 @@ class App extends Component {
     return (
       <div className="main-page">
         <Header />
+        {/* <BasicExample /> */}
         <div className="locate-position">
           <div className="note-container">
             {!docs.length ? <Loader notice="正在拉取数据" />: docs.map(content => {

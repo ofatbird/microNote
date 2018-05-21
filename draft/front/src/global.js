@@ -5,4 +5,4 @@ window.addEventListener('resize', debounce(() => {
     viewportHeight = window.innerHeight
 }, 500, 2000))
 
-export{ viewportHeight }
+export { viewportHeight }
