@@ -5,10 +5,11 @@
 
 .note-container {
     width: 590px;
+    /* width: 100%; */
     margin: 10px auto;
     padding: 30px 0;
     background: #ffffff;
-    font-size: 14px;
+    font-size: 0.875rem;
     box-shadow: 0 0 1px 0 #000000;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .text-wrapper {
-    line-height: 15px;
+    line-height: 0.9375rem;
 }
 
 .text-wrapper a {
@@ -40,7 +41,7 @@
 }
 
 .small {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #808080;
 }
 
@@ -55,3 +56,9 @@
 /* .infoboard {
   border-top: 1px solid #ccc;
 } */
+
+@media (max-width: 590px) {
+    .note-container {
+        width: 100%;
+    }
+}

@@ -12,7 +12,7 @@
     z-index: 999;
 }
 .logo {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #000000;
     text-decoration: none;
     display: inline-block;
@@ -27,13 +27,19 @@
 .avatar {
     display: inline-block;
     background-image: url('./assets/avatar.jpeg');
-    background-size: 30px;
-    width: 30px;
-    height: 30px;
+    background-size: 100%;
+    width: 1.875rem;
+    height: 1.875rem;
     border-radius: 100%;
     vertical-align: middle;
 }
 .ownerName {
     margin-left: .5em;
     vertical-align: middle;
+}
+
+@media (max-width: 400px) {
+    .header>div {
+        display: none;
+    }
 }

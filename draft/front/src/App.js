@@ -5,6 +5,7 @@ import formatUrl from './utils/url'
 import Header from './Header'
 import AudioPlayer from './components/audioPlayer'
 import Loader from './components/loading'
+import Lazyload from './components/Lazyload'
 import './App.css';
 
 const fecthMongo = new fetchMongo()
@@ -45,7 +46,9 @@ class App extends Component {
                   <div className="date space small">{dateStr}</div>
                   <div className="text-wrapper space" dangerouslySetInnerHTML={contentStr} />
                   {music ? <AudioPlayer songId={music.id} currentId={this.state.currentMusic} name={music.name} picUrl={music.url} handlePlayClick={this.handleMusicClick} /> : null}
-                  {content.img ? <div className="img-wrapper space"><img src={content.img} alt="default" /></div> : null}
+                  {
+                    content.img ? <Lazyload><div className="img-wrapper space"><img src={content.img} alt="default" /></div></Lazyload> : null
+                    }
                   <div className="infoboard space small">
                     <span>{content.client}</span>
                   </div>
