@@ -17,5 +17,5 @@ export default function format(time) {
             default: void 0
         }
     }
-    return `${year}${month_day} ${hour_minute}`.replace(/^\s|\s$/g, ``)
+    return { cn_format:`${year}${month_day} ${hour_minute}`.replace(/^\s|\s$/g, ``), link_format: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`}
 }

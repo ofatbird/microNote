@@ -11,14 +11,7 @@
 <body>
     <div style="width: 100px;height: 100px; background: #cccccc"></div>
     <script>
-        var audio = new Audio('http://music.163.com/song/media/outer/url?id=405998841.mp3')
-        var oDiv = document.querySelector('div')
-        oDiv.addEventListener('click', function() {
-            audio.play()
-        })
-        audio.ontimeupdate = function() {
-            console.log(audio.currentTime)
-        }
+       console.log(new Date(2018,0,4,0,0,0).toString())
     </script>
 </body>
 

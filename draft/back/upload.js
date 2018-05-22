@@ -35,7 +35,7 @@ async function sendWithSong() {
 }
 function send() {
     const firstNote = new Note({
-        text_content: `[测试连接](https://doc-0s-0s-adspreview.googleusercontent.com/preview/9o5bees06oeguhr10neq55qcti27eh7n/aqcebdg1u89a43rff403u58fnvl1fqhb/1513728000000/60674899/previewuser/ads-richmedia-studio.eb0a810fc79899a84c709941c5f4e074?previewId=60674899.ads-richmedia-studio.eb0a810fc79899a84c709941c5f4e074&hl=en-US&richmedia=true&zx=ifm5maf69xu0&render=blank&accessKey=37ad8c80caf3055f018771fc8927b814)`,
+        text_content: `继Electron之后又出了个Vuido,用Vue.js编写原生桌面应用[](https://vuido.mimec.org/)`,
         client: '来自于脚本端',
     })
 
