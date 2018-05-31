@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { debounce, getOffsetTop } from '../utils'
+import { debounce, getOffsetTop, throttle } from '../utils'
 import { viewportHeight } from '../global'
 
 // specially for image
@@ -21,9 +21,9 @@ export default class Lazyload extends Component {
                 document.removeEventListener('resize', listenScrollTop)
             }
         }, 500, 2000)
-        const listenOffsetTop = debounce(() => {
+        const listenOffsetTop = throttle(() => {
             wrapperOffset = getOffsetTop(dom)
-        }, 500, 2000)
+        }, 500)
         document.addEventListener('scroll', listenScrollTop)
         document.addEventListener('resize', listenOffsetTop)
         if (wrapperOffset < window.scrollY + viewportHeight) {

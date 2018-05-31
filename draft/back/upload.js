@@ -35,7 +35,7 @@ async function sendWithSong() {
 }
 function send() {
     const firstNote = new Note({
-        text_content: `继Electron之后又出了个Vuido,用Vue.js编写原生桌面应用[](https://vuido.mimec.org/)`,
+        text_content: `ios的safari浏览器有一个奇怪的问题，当点击触发touchend事件后，如果里面用了setTimeout,将不会起作用`,
         client: '来自于脚本端',
     })
 

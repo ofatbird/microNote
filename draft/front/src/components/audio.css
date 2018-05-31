@@ -12,6 +12,7 @@
     width: 4.875rem;
     height: 4.875rem;
     display: inline-block;
+    background-size: cover; 
 }
 
 .mask {

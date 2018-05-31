@@ -1,8 +1,8 @@
-import { debounce } from './utils'
+import { throttle } from './utils'
 let viewportHeight = window.innerHeight
 
-window.addEventListener('resize', debounce(() => {
+window.addEventListener('resize', throttle(() => {
     viewportHeight = window.innerHeight
-}, 500, 2000))
+}, 500))
 
 export { viewportHeight }

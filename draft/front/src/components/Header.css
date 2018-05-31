@@ -38,7 +38,7 @@
     vertical-align: middle;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
     .header>div {
         display: none;
     }

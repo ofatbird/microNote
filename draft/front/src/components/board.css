@@ -30,6 +30,7 @@
 
 .text-wrapper a {
     text-decoration: none;
+    line-height: 1.2;
 }
 
 .text-wrapper a.ellipsis:after {
