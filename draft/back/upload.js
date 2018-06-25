@@ -35,14 +35,17 @@ async function sendWithSong() {
 }
 function send() {
     const firstNote = new Note({
-        text_content: `ios的safari浏览器有一个奇怪的问题，当点击触发touchend事件后，如果里面用了setTimeout,将不会起作用`,
+        text_content: `fake meassage used for test`,
         client: '来自于脚本端',
     })
 
     firstNote.save().then((doc, err) => {
         if (err) console.log(err)
-        else db.close()
+        // else db.close()
     })
 }
 send()
 // sendWithSong()
+for (var i = 0; i < 20; i++ ) {
+    send()
+}

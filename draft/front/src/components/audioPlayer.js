@@ -57,6 +57,7 @@ export default class AudioPlayer extends Component {
             this.forceUpdate()
         })
     }
+
     handleAlbumClick = () => {
         const { isPlay, audio } = this.state
         const { handlePlayClick, songId } = this.props
